@@ -28,7 +28,7 @@ Storeasy is a secure, user-friendly file storage and sharing platform built as a
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/storeasy.git
+   git clone https://github.com/Ozair007/storeasy.git
    cd storeasy
 2. **Install dependencies:**
    ```bash
