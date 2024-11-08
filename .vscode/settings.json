@@ -1,0 +1,4 @@
+{
+  "cSpell.words": ["Storeasy", "tailwindcss"],
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" }
+}
