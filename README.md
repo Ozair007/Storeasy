@@ -28,15 +28,20 @@ Storeasy is a secure, user-friendly file storage and sharing platform built as a
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/storeasy.git
+   git clone https://github.com/Ozair007/storeasy.git
    cd storeasy
 2. **Install dependencies:**
    ```bash
    npm install
 3. **Configure Environment Variables:**
    ```bash
-   NEXT_PUBLIC_APPWRITE_PROJECT_ID=your_project_id
-   NEXT_PUBLIC_APPWRITE_ENDPOINT=your_appwrite_endpoint
+   NEXT_PUBLIC_APPWRITE_ENDPOINT="https://cloud.appwrite.io/v1"
+   NEXT_PUBLIC_APPWRITE_PROJECT=""
+   NEXT_PUBLIC_APPWRITE_DATABASE=""
+   NEXT_PUBLIC_APPWRITE_USERS_COLLECTION=""
+   NEXT_PUBLIC_APPWRITE_FILES_COLLECTION=""
+   NEXT_PUBLIC_APPWRITE_BUCKET=""
+   NEXT_APPWRITE_KEY=""
 4. **Run the development server:**
    ```bash
    npm run dev
