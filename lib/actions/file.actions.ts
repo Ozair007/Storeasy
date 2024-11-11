@@ -78,7 +78,6 @@ const createQueries = (
   if (types.length > 0) queries.push(Query.equal("type", types));
   if (searchText) queries.push(Query.contains("name", searchText));
   if (limit) queries.push(Query.limit(limit));
-
   if (sort) {
     const [sortBy, orderBy] = sort.split("-");
 
@@ -193,7 +192,18 @@ export const deleteFile = async ({
   }
 };
 
-// ============================== TOTAL FILE SPACE USED
+/**
+ * Calculates and returns the total space used by the current user's files.
+ *
+ * This function retrieves all documents (files) owned by the current user from the Appwrite database
+ * and computes the total storage space used, categorized by file type (image, document, video, audio, other).
+ * It also calculates the latest modification date for each file type and the overall space used.
+ * The available bucket storage is set to 2GB.
+ *
+ * @returns {Promise<object>} An object containing the size and latest modification date for each file type,
+ *                            the total space used, and the total available storage.
+ * @throws {Error} If the user is not authenticated or if there's an error in retrieving or processing the data.
+ */
 export async function getTotalSpaceUsed() {
   try {
     const { databases } = await createSessionClient();
