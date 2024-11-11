@@ -4,6 +4,7 @@ import { getFiles } from "@/lib/actions/file.actions";
 import { Models } from "node-appwrite";
 import Card from "@/components/Card";
 import { getFileTypesParams } from "@/lib/utils";
+import Sort from "@/components/Sort";
 
 const Page = async ({ searchParams, params }: SearchParamProps) => {
   const type = ((await params)?.type as string) || "";
@@ -26,7 +27,7 @@ const Page = async ({ searchParams, params }: SearchParamProps) => {
           <div className="sort-container">
             <p className="body-1 hidden text-light-200 sm:block">Sort by:</p>
 
-            {/* <Sort /> */}
+            <Sort />
           </div>
         </div>
       </section>
